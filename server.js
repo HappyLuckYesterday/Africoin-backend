@@ -1,0 +1,38 @@
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const path = require("path");
+const mongoose = require("mongoose");
+const passport = require("passport");
+require("dotenv").config();
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(passport.initialize());
+console.log(process.env.MONGO_URL);
+mongoose
+    .connect(
+        process.env.MONGO_URL
+    )
+    .then(() => {
+        console.log("Mongo DB connected !!!");
+    });
+
+const userRoutes = require("./routes/user");
+const blogRoutes = require("./routes/blog");
+const faqRoutes = require("./routes/faq");
+const contactRoutes = require("./routes/contact");
+
+app.use("/api/user", userRoutes);
+app.use("/api/blog", blogRoutes);
+app.use("/api/faq", faqRoutes);
+app.use("/api/contact", contactRoutes);
+
+app.listen(port, () => {
+    console.log(`Express server running at http://localhost:${port}/`);
+});
