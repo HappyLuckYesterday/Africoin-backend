@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize());
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 console.log(process.env.MONGO_URL);
 mongoose
@@ -37,7 +37,7 @@ app.use("/api/contact", contactRoutes);
 
 // Catch-all route to return the front-end app
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
   });
 
 app.listen(port, () => {
