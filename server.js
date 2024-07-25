@@ -36,9 +36,9 @@ app.use("/api/faq", faqRoutes);
 app.use("/api/contact", contactRoutes);
 
 // Catch-all route to return the front-end app
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
-//   });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  });
 
 app.listen(port, () => {
     console.log(`Express server running at http://localhost:${port}/`);
