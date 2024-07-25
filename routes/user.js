@@ -77,4 +77,65 @@ router.post("/login", async (req, res) => {
   }
 });
 
+router.get(
+  "/list",
+  async (req, res) => {
+      console.log('get users')
+      try {
+          const users = await User.find({}, { id: 1, title: 1, body: 1 });
+          console.log(users);
+          res.status(201).json(users);
+      }
+      catch (error) {
+          console.error(error);
+          res.status(500).json({ error: "Server error: Can not find hotels" });
+      }
+  }
+);
+
+// Create a new user
+router.post('/', async (req, res) => {
+  try {
+      const user = await User.create(req.body);
+      console.log('new user: ', user);
+      res.status(201).json(user);
+  } catch (error) {
+      res.status(500).json({ error: 'Error creating user' });
+  }
+});
+
+// Read a user
+router.get('/:id', async (req, res) => {
+  try {
+      const user = await User.findById(req.params.id);
+      res.status(201).json(user);
+  } catch (error) {
+      res.status(500).json({ error: 'Error fetching users' });
+  }
+});
+
+// Update a user
+router.put('/:id', async (req, res) => {
+  try {
+      const user = await User.findByIdAndUpdate(
+          req.params.id,
+          req.body,
+          { new: true }
+      );
+      res.status(201).json(user);
+  } catch (error) {
+      res.status(500).json({ error: 'Error fetching users' });
+  }
+});
+
+// Delete a user
+router.delete('/:id', async (req, res) => {
+  try {
+      await User.findByIdAndDelete(req.params.id);
+      res.status(201).json({ message: "User deleted successfully" });
+  } catch (error) {
+      res.status(500).json({ error: 'Error deleting user' });
+  }
+});
+
 module.exports = router;

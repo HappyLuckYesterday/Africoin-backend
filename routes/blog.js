@@ -9,7 +9,7 @@ router.get(
         try {
             const blogs = await Blog.find({}, {});
             console.log(blogs);
-            res.status(201).json({ message: "success", blogs: blogs });
+            res.status(201).json(blogs);
         }
         catch (error) {
             console.error(error);

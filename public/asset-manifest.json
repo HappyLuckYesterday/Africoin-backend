@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.51daa84b.css",
-    "main.js": "/static/js/main.c57b9e49.js",
+    "main.css": "/static/css/main.5157b5ac.css",
+    "main.js": "/static/js/main.f2245c7d.js",
     "static/js/453.50a83da2.chunk.js": "/static/js/453.50a83da2.chunk.js",
     "static/media/leafpattern.png": "/static/media/leafpattern.a74e349d879eb14831c4.png",
     "static/media/Road.png": "/static/media/Road.f7e0288bb77b10f4294f.png",
     "static/media/tower.png": "/static/media/tower.a8bd968c417d4410166d.png",
     "static/media/GreenWorld.png": "/static/media/GreenWorld.8bb110933aa9e84ca7e1.png",
-    "static/media/background1.png": "/static/media/background1.2f43f93b8f071d22dea8.png",
     "static/media/government.png": "/static/media/government.0865f884b240e1696345.png",
     "static/media/house2.png": "/static/media/house2.e365c01d0c5e40b99363.png",
     "static/media/house.png": "/static/media/house.56c9a6fc3fb92a362abd.png",
@@ -43,12 +42,12 @@
     "static/media/inter-greek-ext-400-normal.woff2": "/static/media/inter-greek-ext-400-normal.1e2b9039d9ecdbea5d80.woff2",
     "static/media/inter-vietnamese-400-normal.woff2": "/static/media/inter-vietnamese-400-normal.5952d3d3c5df5a2f8e09.woff2",
     "index.html": "/index.html",
-    "main.51daa84b.css.map": "/static/css/main.51daa84b.css.map",
-    "main.c57b9e49.js.map": "/static/js/main.c57b9e49.js.map",
+    "main.5157b5ac.css.map": "/static/css/main.5157b5ac.css.map",
+    "main.f2245c7d.js.map": "/static/js/main.f2245c7d.js.map",
     "453.50a83da2.chunk.js.map": "/static/js/453.50a83da2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51daa84b.css",
-    "static/js/main.c57b9e49.js"
+    "static/css/main.5157b5ac.css",
+    "static/js/main.f2245c7d.js"
   ]
 }
