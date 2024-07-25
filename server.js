@@ -16,10 +16,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(express.static(path.join(__dirname, 'public')));
 
-console.log(process.env.MONGO_URL);
+console.log(process.env.MONGO_URI);
 mongoose
     .connect(
-        process.env.MONGO_URL
+        process.env.MONGO_URI
     )
     .then(() => {
         console.log("Mongo DB connected !!!");

@@ -7,9 +7,9 @@ router.get(
     async (req, res) => {
         console.log('get faqs')
         try {
-            const faqs = await Faq.find({}, { title: 1, body: 1 });
+            const faqs = await Faq.find({}, { id: 1, title: 1, body: 1 });
             console.log(faqs);
-            res.status(201).json({ message: "success", faqs: faqs });
+            res.status(201).json(faqs);
         }
         catch (error) {
             console.error(error);
