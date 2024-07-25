@@ -82,7 +82,7 @@ router.get(
   async (req, res) => {
       console.log('get users')
       try {
-          const users = await User.find({}, { id: 1, title: 1, body: 1 });
+          const users = await User.find({}, { id: 1, first_name: 1, last_name: 1, email: 1, password: 1, role: 1 });
           console.log(users);
           res.status(201).json(users);
       }
