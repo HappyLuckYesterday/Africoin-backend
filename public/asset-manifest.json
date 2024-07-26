@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.69f54935.css",
-    "main.js": "/static/js/main.f09453f0.js",
+    "main.js": "/static/js/main.761600ee.js",
     "static/js/453.50a83da2.chunk.js": "/static/js/453.50a83da2.chunk.js",
     "static/media/leafpattern.png": "/static/media/leafpattern.a74e349d879eb14831c4.png",
     "static/media/Road.png": "/static/media/Road.f7e0288bb77b10f4294f.png",
@@ -43,11 +43,11 @@
     "static/media/inter-vietnamese-400-normal.woff2": "/static/media/inter-vietnamese-400-normal.5952d3d3c5df5a2f8e09.woff2",
     "index.html": "/index.html",
     "main.69f54935.css.map": "/static/css/main.69f54935.css.map",
-    "main.f09453f0.js.map": "/static/js/main.f09453f0.js.map",
+    "main.761600ee.js.map": "/static/js/main.761600ee.js.map",
     "453.50a83da2.chunk.js.map": "/static/js/453.50a83da2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.69f54935.css",
-    "static/js/main.f09453f0.js"
+    "static/js/main.761600ee.js"
   ]
 }
