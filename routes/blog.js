@@ -30,8 +30,10 @@ router.post('/', async (req, res) => {
 
 // Read a blog
 router.get('/:id', async (req, res) => {
+    console.log("read a blog by id: ", req.params.id);
     try {
         const blog = await Blog.findById(req.params.id);
+        console.log("blog by id: ", blog);
         res.status(201).json(blog);
     } catch (error) {
         res.status(500).json({ error: 'Error fetching blogs' });
