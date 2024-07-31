@@ -17,11 +17,7 @@ const getBlogs = async (req, res) => {
 // Create a new blog
 const createBlog = async (req, res) => {
     try {
-        const {title, body, view, like} = req.body;
-        const image = req.file ? `/uploads/${req.file.filename}` : '';
-        console.log('body', req.body);
-        console.log({title, body, image, view, like});
-        const blog = await Blog.create({title, body, image, view, like});
+        const blog = await Blog.create(req.body);
         res.status(201).json(blog);
     } catch (error) {
         res.status(500).json({ error: 'Error creating blog' });
@@ -43,13 +39,9 @@ const getBlogById = async (req, res) => {
 // Update a blog
 const updateBlog = async (req, res) => {
     try {
-        const {title, body, view, like} = req.body;
-        const image = req.file ? `/uploads/${req.file.filename}` : '';
-        console.log('body', body);
-        console.log({title, body, image, view, like});
         const blog = await Blog.findByIdAndUpdate(
             req.params.id,
-            {title, body, image, view, like},
+            req.body,
             { new: true }
         );
         res.status(201).json(blog);
