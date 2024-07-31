@@ -11,7 +11,7 @@ var ContactSchema = new mongoose.Schema(
     country: {
       type: String,
     },
-    Organization: {
+    organization: {
       type: String,
     },
     phone: {
