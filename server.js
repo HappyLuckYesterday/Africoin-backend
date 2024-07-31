@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const path = require("path");
+const multer = require("multer");
 const mongoose = require("mongoose");
 const passport = require("passport");
 require("dotenv").config();
@@ -25,13 +26,26 @@ mongoose
         console.log("Mongo DB connected !!!");
     });
 
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/');
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + '-' + file.originalname);
+  },
+});
+
+const upload = multer({ storage });
+
 const userRoutes = require("./routes/user");
 const blogRoutes = require("./routes/blog");
 const faqRoutes = require("./routes/faq");
 const contactRoutes = require("./routes/contact");
 
 app.use("/api/user", userRoutes);
-app.use("/api/blog", blogRoutes);
+app.use("/api/blog", blogRoutes(upload));
 app.use("/api/faq", faqRoutes);
 app.use("/api/contact", contactRoutes);
 

@@ -8,6 +8,9 @@ var BlogSchema = new mongoose.Schema(
         body: {
             type: String,
         },
+        image: {
+            type: String,
+        },
         poster: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User",
