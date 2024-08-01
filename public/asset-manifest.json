@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.960afe19.css",
-    "main.js": "/static/js/main.27dbe2bf.js",
+    "main.css": "/static/css/main.0cc65462.css",
+    "main.js": "/static/js/main.02c2defe.js",
     "static/js/453.dd58caa9.chunk.js": "/static/js/453.dd58caa9.chunk.js",
     "static/media/leafpattern.png": "/static/media/leafpattern.a74e349d879eb14831c4.png",
     "static/media/Road.png": "/static/media/Road.f7e0288bb77b10f4294f.png",
@@ -42,12 +42,12 @@
     "static/media/inter-greek-ext-400-normal.woff2": "/static/media/inter-greek-ext-400-normal.1e2b9039d9ecdbea5d80.woff2",
     "static/media/inter-vietnamese-400-normal.woff2": "/static/media/inter-vietnamese-400-normal.5952d3d3c5df5a2f8e09.woff2",
     "index.html": "/index.html",
-    "main.960afe19.css.map": "/static/css/main.960afe19.css.map",
-    "main.27dbe2bf.js.map": "/static/js/main.27dbe2bf.js.map",
+    "main.0cc65462.css.map": "/static/css/main.0cc65462.css.map",
+    "main.02c2defe.js.map": "/static/js/main.02c2defe.js.map",
     "453.dd58caa9.chunk.js.map": "/static/js/453.dd58caa9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.960afe19.css",
-    "static/js/main.27dbe2bf.js"
+    "static/css/main.0cc65462.css",
+    "static/js/main.02c2defe.js"
   ]
 }
