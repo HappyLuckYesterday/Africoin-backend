@@ -7,7 +7,7 @@ router.get(
     async (req, res) => {
         console.log('get contacts')
         try {
-            const contacts = await Contact.find({}, { id: 1, title: 1, body: 1 });
+            const contacts = await Contact.find({}, { id: 1, first_name: 1, last_name: 1, country: 1, organization: 1, email: 1, phone: 1, message: 1 });
             console.log(contacts);
             res.status(201).json(contacts);
         }
@@ -21,6 +21,7 @@ router.get(
 // Create a new contact
 router.post('/', async (req, res) => {
     try {
+        console.log(req.body);
         const contact = await Contact.create(req.body);
         res.status(201).json(contact);
     } catch (error) {
